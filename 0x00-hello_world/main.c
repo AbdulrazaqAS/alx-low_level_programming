@@ -7,5 +7,6 @@
  */
 int main(void)
 {
+	echo "I am working well"
 	return (0);
 }

@@ -7,6 +7,7 @@
  *
  * Retun: Always 0 (Success)
  *
+ * Description: Check some conditionals
  */
 int main(void)
 {

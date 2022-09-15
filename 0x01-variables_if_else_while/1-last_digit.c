@@ -3,9 +3,9 @@
 #include <time.h>
 
 /*
- * main - Entry
+ * main - Entry point
  *
- * Retun: 0
+ * Retun: Always 0 (Success)
  *
  */
 int main(void)
@@ -15,12 +15,11 @@ int main(void)
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	mod = n % 10;
-	printf("Last digit 0f %d is %d ", n, mod);
 	if (mod > 5)
-		printf("and is greater than 5\n");
+		printf("Last digit 0f %d is %d and is greater than 5\n", n, mod);
 	else if (mod == 0)
-		printf("and is 0\n");
+		printf("Last digit 0f %d is %d and is 0\n", n, mod);
 	else if (mod < 6 && mod != 0)
-		printf("and is less than 6 and not 0\n");
+		printf("Last digit 0f %d is %d and is less than 6 and not 0\n", n, mod);
 	return (0);
 }

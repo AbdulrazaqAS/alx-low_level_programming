@@ -9,7 +9,7 @@ int main(void)
 {
 	int num;
 	for (num = 0; num < 10; num++)
-		printf("%d", num);
-	printf("\n");
+		put((num % 10) + '0');
+	putchar('\n');
 	return (0);
 }

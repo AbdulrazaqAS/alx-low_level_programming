@@ -11,9 +11,9 @@ int _strlen(char *s)
 
 	index = 0;
 
-	while (*(s + 1) != '\0')
+	while (*s++)
 	{
 		index++;
 	}
-	return (index + 1);
+	return (index);
 }

@@ -13,6 +13,6 @@ char *_strcpy(char *dest, char *src)
 	while (*src++)
 		len++;
 	for (index = 0; index < len; index++)
-		*(dest + index) = src[index];
-	return (&dest);
+		dest[index] = src[index];
+	return (dest);
 }

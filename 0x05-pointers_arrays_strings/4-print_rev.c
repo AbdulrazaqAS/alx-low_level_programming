@@ -4,7 +4,7 @@
  * print_rev - reverse
  * @s: str to reverse
  */
-void _puts(char *s)
+void print_rev(char *s)
 {
 	int len = _strlen(s);
 

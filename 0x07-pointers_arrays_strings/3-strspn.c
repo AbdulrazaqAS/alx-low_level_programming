@@ -12,6 +12,8 @@ unsigned int _strspn(char *s, char *accept)
 	unsigned int a, b = 0, c = 0;
 
 	for (a = 0; s[a] != ' '; a++)
+	{
+		c = 0;
 		while (accept[c])
 		{
 			if (accept[c] == s[a])
@@ -21,5 +23,6 @@ unsigned int _strspn(char *s, char *accept)
 			}
 			c++;
 		}
+	}
 	return (b);
 }

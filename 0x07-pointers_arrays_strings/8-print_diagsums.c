@@ -1,4 +1,4 @@
-#include "stdlib.h"
+#include "stdio.h"
 #include "main.h"
 
 /**
@@ -14,9 +14,9 @@ void print_diagsums(int *a, int size)
 		for (c = 0; c < size; c++)
 		{
 			if (b == c)
-				diag1 += (*a)[b][c];
+				diag1 = diag1 + (*a)[b][c];
 			if (b + c == size -1)
-				diag2 += (*a)[b][c];
+				diag2 = diag2 + (*a)[b][c];
 		}
 	printf("%d, %d\n", diag1, diag2);
 }

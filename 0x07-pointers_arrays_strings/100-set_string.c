@@ -7,11 +7,5 @@
  */
 void set_string(char **s, char *to)
 {
-	int a = 0;
-
-	while (**(s + a))
-	{
-		to[a] = **(s + a);
-		a++;
-	}
+	*s = to;
 }

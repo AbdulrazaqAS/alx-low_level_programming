@@ -14,12 +14,13 @@ int check_palindrome(char *s, int len, int index)
 	if (s[index] == s[len - index - 1])
 		return (check_palindrome(s, len, index + 1));
 	return (0);
+}
 /**
  * is_palindrome - checks if a str is a palindrome
  * @s: str
  * Return: if yes 1, else 0
  */
-Int is_palindrome(char *s)
+int is_palindrome(char *s)
 {
 	int len = 0;
 

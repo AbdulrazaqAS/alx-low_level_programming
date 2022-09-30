@@ -9,9 +9,9 @@
 int check_if_prime(int num, int div)
 {
 	if (div == num / 2)
-		return (1);
-	if (num % div == 0 && div < num / 2)
 		return (0);
+	if (num % div == 0 && div < num / 2)
+		return (1);
 	return (check_if_prime(num, div + 1));
 }
 
@@ -24,5 +24,5 @@ int is_prime_number(int n)
 {
 	if (n <= 1)
 		return (0);
-	return (check_if_prime(n, 0));
+	return (check_if_prime(n, 2));
 }

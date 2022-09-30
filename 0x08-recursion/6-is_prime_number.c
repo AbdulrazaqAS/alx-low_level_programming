@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * check_if_prime
+ * check_if_prime - checks if num is prime
  * @num: num
  * @div: divisor
  * Return: 0 if yes, else 1

@@ -14,6 +14,7 @@ int _strlen(char *s)
 		len++;
 		len += _strlen(s + len);
 	}
+	return (len);
 }
 
 /**
@@ -38,8 +39,6 @@ int check_palindrome(char *s, int len, int index)
  */
 int is_palindrome(char *s)
 {
-	int len = 0;
-
 	if (!*s)
 		return (1);
 	return (check_palindrome(s, _strlen(s), 0));

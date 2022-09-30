@@ -22,7 +22,7 @@ int check_if_prime(int num, int div)
  */
 int is_prime_number(int n)
 {
-	if (n == 0 || n == 1)
+	if (n <= 1)
 		return (0);
 	return (check_if_prime(n, 0));
 }

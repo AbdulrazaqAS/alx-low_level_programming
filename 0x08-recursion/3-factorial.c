@@ -1,0 +1,16 @@
+#include "main.h"
+
+/**
+ * factorial - calc the factoril of a num
+ * @n: num
+ *
+ * Return: n!
+ */
+int factorial(int n)
+{
+	if (n < 0)
+		return (-1);
+	if (n == 1)
+		return (1);
+	return (n * factorail(n - 1));
+}

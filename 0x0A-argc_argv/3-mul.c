@@ -13,8 +13,8 @@ int main(int argc, char *argv[])
 
 	if (argc > 2)
 	{
-		sum += atoi(argv[1]);
-		sum += atoi(argv[2]);
+		sum *= atoi(argv[1]);
+		sum *= atoi(argv[2]);
 		printf("%d\n", sum);
 		return (0);
 	}

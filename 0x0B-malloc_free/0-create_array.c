@@ -1,5 +1,6 @@
 #include "main.h"
-#include <stdlib>
+#include <stdlib.h>
+#include <stddef.h>
 
 /**
  * create_array - creates an array of chars and initiaalize it with a specific char.

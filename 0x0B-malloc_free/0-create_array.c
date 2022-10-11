@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdlib>
 
 /**
  * create_array - creates an array of chars and initiaalize it with a specific char.
@@ -23,6 +24,8 @@ char *create_array(unsigned int size, char c)
 	{
 		array[index] = c;
 	}
+
+	free(array);
 
 	return (array);
 }

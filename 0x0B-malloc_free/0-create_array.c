@@ -3,7 +3,7 @@
 #include <stddef.h>
 
 /**
- * create_array - creates an array of chars 
+ * create_array - creates an array of chars
  * and initiaalize it with a specific char.
  * @size: size
  * @c: char for init

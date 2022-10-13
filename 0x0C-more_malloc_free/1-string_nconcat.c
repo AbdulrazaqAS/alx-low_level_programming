@@ -19,18 +19,18 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s1 = "";
 
 	while (s1[len1])
-			len1++;
+		len1++;
 
 	if (s2 != NULL)
 		s2 = "";
 
 	while (s2[len2])
-			len2++;
+		len2++;
 
 	if (n >= len2)
-		n = len2;
-
-	total = len1 + n;
+		total = len1 + len2;
+	else
+		total = len1 + n;
 
 	new = malloc(sizeof(char) * (n + 1));
 	if (new == NULL)

@@ -5,6 +5,8 @@
 /**
  * malloc_checked - allocates mem
  * @b: bytes
+ *
+ * Return: pointer to mem block
  */
 void *malloc_checked(unsigned int b)
 {

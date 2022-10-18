@@ -8,6 +8,8 @@
  */
 int int_index(int *array, int size, int (*cmp)(int))
 {
+	int index;
+
 	if (array == NULL || cmp == NULL)
 		exit(0);
 	if (size <= 0)

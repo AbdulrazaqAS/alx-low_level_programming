@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 	num2 = atoi(argv[3]);
 	op = argv[2];
 
-	if (op[0] != '+' || op[0] != '-' || op[0] != '*' || op[0] != '/' || op[0] != '%' || op[1] != '\0')
+	if (get_op_func(op) == NULL || op[1] != '\0')
 	{
 		printf("Error\n %c", op[0]);
 		exit(99);

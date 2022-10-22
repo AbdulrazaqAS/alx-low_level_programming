@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 
 	if (op[0] != '+' || op[0] != '-' || op[0] != '*' || op[0] != '/' || op[0] != '%' || op[1] != '\0')
 	{
-		printf("Error\n");
+		printf("Error\n %c", op[0]);
 		exit(99);
 	}
 	if ((*op == '/' || *op == '%') && num2 == 0)

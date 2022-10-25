@@ -15,14 +15,15 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	for (index = 0; index < n; index++)
 	{
 		if (separator == NULL || index == n - 1)
-			printf("%d", va_arg(vl, int));
+			printf("%s", va_arg(vl, char*));
 		else
 		{
 			str = va_arg(vl, char*);
 			if (str == NULL)
-				printf("%d%s", str, separator);
+				printf("%s%s", str, separator);
 			else
-				printf("%d%s", str, separator);
+				printf("%s%s", str, separator);
+		}
 	}
 	printf("\n");
 }

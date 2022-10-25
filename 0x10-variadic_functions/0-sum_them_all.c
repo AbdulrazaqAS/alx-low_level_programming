@@ -3,7 +3,7 @@
 /**
  * sum_them_all - sum all varargs
  *
- * n: fisrt arg
+ * @n: fisrt arg
  *
  * Return: int
  */

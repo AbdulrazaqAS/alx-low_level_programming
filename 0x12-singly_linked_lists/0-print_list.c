@@ -9,7 +9,6 @@
 size_t print_list(const list_t *h)
 {
 	size_t nodes = 0;
-	list_t *temp;
 
 	while (h->next){
 		if (h->str)

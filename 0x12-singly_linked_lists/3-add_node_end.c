@@ -24,13 +24,13 @@ list_t *add_node_end(list_t **head, const char *str)
 		}
 	}
 
-	while (*head->next)
-		*head = *head->next;
+	while (*head)
+		*head = (*head)->next;
 
 	newNode->str = strtemp;
 	(*newNode).len = len;
 	newNode->next = NULL;
-	*head->next = newNode;
+	*head = newNode;
 
 	return (newNode);
 }

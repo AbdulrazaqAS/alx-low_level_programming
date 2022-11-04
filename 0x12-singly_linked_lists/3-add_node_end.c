@@ -27,7 +27,7 @@ list_t *add_node_end(list_t **head, const char *str)
 
 	head_dereferenced = *head;
 	while (head_dereferenced->next)
-		head_dereferenced = ->next;
+		head_dereferenced = head_dereferenced->next;
 
 	newNode->str = strtemp;
 	(*newNode).len = len;

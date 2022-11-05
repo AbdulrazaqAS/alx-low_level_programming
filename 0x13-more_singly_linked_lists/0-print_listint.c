@@ -4,7 +4,7 @@
  * print_listint - prints all elements of LL
  * @h: head
  *
- * Retrun: num of nodes
+ * Return: num of nodes
  */
 size_t print_listint(const listint_t *h)
 {

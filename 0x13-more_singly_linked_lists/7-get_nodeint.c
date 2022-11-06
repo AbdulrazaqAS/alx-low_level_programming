@@ -4,6 +4,8 @@
  * get_nodeint_at_index - get node at index
  * @head: head
  * @index: index
+ *
+ * Return: node at index
  */
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {

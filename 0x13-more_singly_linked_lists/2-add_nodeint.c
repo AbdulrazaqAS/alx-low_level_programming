@@ -4,6 +4,8 @@
  * add_nodeint - adds a node at the beginning
  * @head: head
  * @n: n data
+ *
+ * Return: ptr to new
  */
 listint_t *add_nodeint(listint_t **head, const int n)
 {

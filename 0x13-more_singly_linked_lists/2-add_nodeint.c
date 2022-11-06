@@ -5,7 +5,7 @@
  * @head: head
  * @n: n data
  */
-listint_t *add_nodeint(listint_t **head, constant int n)
+listint_t *add_nodeint(listint_t **head, const int n)
 {
 	listint_t new;
 

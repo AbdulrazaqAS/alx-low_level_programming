@@ -27,15 +27,15 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		return (new);
 	}
 
-	while (copy && copy->next)
+	while (temp && temp->next)
 	{
 		if (counter == idx - 1)
 		{
-			new->next = copy->next;
-			copy->next = new;
+			new->next = temp->next;
+			temp->next = new;
 			return (new);
 		}
-		copy = copy->next;
+		temp = temp->next;
 		counter++;
 	}
 

@@ -1,4 +1,4 @@
-#include "main.c"
+#include "main.h"
 
 /**
  * binary_to_uint - binary to unsigned int

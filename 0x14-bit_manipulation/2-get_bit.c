@@ -7,12 +7,13 @@
  *
  * Return: index of the bit
  */
-iint get_bit(unsigned long int n, unsigned int index)
+int get_bit(unsigned long int n, unsigned int index)
 {
 	unsigned long int counter = 0, temp = n;
 
+	if (index >= n)
+		return (-1);
 	n >>= index;
-
 	if (n & 1)
 		return (1);
 	else

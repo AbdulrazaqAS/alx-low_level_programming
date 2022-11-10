@@ -12,6 +12,6 @@ int set_bit(unsigned long int *n, unsigned int index)
 	/* If idex is >= 8 * 8 i.e. 32 bits */
 	if (index >= sizeof(*n) * 8)
 		return (-1);
-	*n |= (1<<index);
+	*n |= (1 << index);
 	return (1);
 }

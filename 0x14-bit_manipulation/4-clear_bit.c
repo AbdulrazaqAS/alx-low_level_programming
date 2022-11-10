@@ -18,7 +18,7 @@ int clear_bit(unsigned long int *n, unsigned int index)
 	temp <<= (index + 1);
 	for (i = 0; i < index; i++)
 	{
-		set_bit(temp, i);
+		set_bit(&temp, i);
 	}
 	*n &= temp;
 	return (1);

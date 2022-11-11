@@ -10,7 +10,7 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fd;
-	char buf[] = NULL;
+	char *buf = NULL;
 	ssize_t res;
 
 	if (!filename)
@@ -20,6 +20,9 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (fd == -1)
 		return (0);
 	res = read(fd, buf, letters);
+
+	if (letters != res)
+		return (0);
 
 	close(fd);
 

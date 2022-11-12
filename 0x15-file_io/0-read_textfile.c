@@ -11,17 +11,26 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fd;
 	char *buf = NULL;
-	ssize_t res;
+	ssize_t rd, wr;
 
 	if (!filename)
 		return (0);
 
-	fd = open(filename, O_RDWR);
+	fd = open(filename, O_RDONLY);
 	if (fd == -1)
 		return (0);
-	res = read(fd, buf, letters);
+	rd = read(fd, buf, letters);
+	wr = write(STDOUT_FILENO, buf, rd);
 
+	if (rd == -1 || wr == -1 || w != r)
+	{
+		free(buf);
+		return (0);
+	}
+
+
+	free(buf);
 	close(fd);
 
-	return (res);
+	return (wr);
 }

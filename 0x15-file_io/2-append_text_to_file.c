@@ -19,7 +19,7 @@ int append_text_to_file(const char *filename, char *text_content)
 		while (*(filename + len))
 			len++;
 
-	fd = open(filename, O_APPEND | O_WRONLY, 0400);
+	fd = open(filename, O_APPEND | O_WRONLY);
 	wr = write(fd, text_content, len);
 
 	if (fd == -1 || wr == -1)

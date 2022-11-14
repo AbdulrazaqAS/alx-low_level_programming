@@ -7,6 +7,20 @@
 #include <fcntl.h>
 
 /**
+ * closeFD - closes a fildes
+ * @fd: fildes
+ *
+ */
+void closeFD(int fd)
+{
+	if (close(fd) == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
+		exit(100);
+	}
+}
+
+/**
  * main - entry point
  * @argc: args count
  * @argv: args vector
@@ -46,17 +60,7 @@ int main(int argc, char *argv[])
 	} while (rd == 1024);
 
 	free(buf);
-	if (close(fd) == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
-		exit(100);
-	}
-
-	if (close(fd2) == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd2);
-		exit(100);
-	}
-
+	closeFD(fd);
+	closeFD(fd2);
 	return (0);
 }

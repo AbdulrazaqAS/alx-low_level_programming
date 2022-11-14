@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <unistd.h>
-#include <stdlid.h>
+#include <stdlib.h>
 #include <stddef.h>
 #include <sys/types.h>
 #include <sys/stat.h>
@@ -54,4 +54,6 @@ int main(int argc, char *argv[])
 		fprintf(stderr, "Error: Can't close fd %d\n", fd2);
 		exit(100);
 	}
+
+	return (0);
 }

@@ -37,7 +37,7 @@ int main(int argc, char *argv[])
 		if (rd < 1024)
 			buf[rd] = '\0';
 		wr = dprintf(fd2, "%s", buf);
-		if (fd2 == -1 || wr == 0)
+		if (fd2 == -1)
 		{
 			fprintf(stderr, "Error: Can't write to %s\n", argv[2]);
 			exit(99);

@@ -27,20 +27,24 @@ int main(int argc, char *argv[])
 	buf = malloc(sizeof(char) * 1024);
 
 	fd = open(argv[1], O_RDONLY);
-	rd = read(fd, buf, 1024);
-	if (fd == -1 || rd == -1)
+	do
 	{
-		fprintf(stderr, "Error: Can't read from file %s\n", argv[1]);
-		exit(98);
-	}
+		rd = read(fd, buf, 1024);
+		if (fd == -1 || rd == -1)
+		{
+			fprintf(stderr, "Error: Can't read from file %s\n", argv[1]);
+			exit(98);
+		}
 
-	fd2 = open(argv[2], O_CREAT | O_TRUNC | O_APPEND | O_WRONLY, 0664);
-	wr = dprintf(fd2, "%s", buf);
-	if (fd2 == -1 || wr == 0)
-	{
-		fprintf(stderr, "Error: Can't write to %s\n", argv[2]);
-		exit(99);
+		fd2 = open(argv[2], O_CREAT | O_TRUNC | O_APPEND | O_WRONLY, 0664);
+		wr = dprintf(fd2, "%s", buf);
+		if (fd2 == -1 || wr == 0)
+		{
+			fprintf(stderr, "Error: Can't write to %s\n", argv[2]);
+			exit(99);
+		}
 	}
+	while (rd < 1024);
 
 	free(buf);
 	if (close(fd) == -1)

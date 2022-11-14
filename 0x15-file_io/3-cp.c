@@ -40,8 +40,7 @@ int main(int argc, char *argv[])
 	buf = malloc(sizeof(char) * 1024);
 	fd = open(argv[1], O_RDONLY);
 	fd2 = open(argv[2], O_CREAT | O_TRUNC | O_APPEND | O_WRONLY, 0664);
-	do
-	{
+	do {
 		rd = read(fd, buf, 1024);
 		if (fd == -1 || rd == -1)
 		{

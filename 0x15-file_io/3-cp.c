@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
 
 	fd = open(argv[1], O_RDONLY);
 	rd = read(fd, buf, 1024);
-	if (fd == -1 || rd = -1)
+	if (fd == -1 || rd == -1)
 	{
 		fprintf(stderr, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
 
 	fd2 = open(argv[2], O_CREAT | O_TRUNC | O_APPEND | O_WRONLY, 0664);
 	wr = fprintf(fd2, "%s", buf);
-	if (fd2 == -1 || wr = 0)
+	if (fd2 == -1 || wr == 0)
 	{
 		fprintf(stderr, "Error: Can't write to %s\n", argv[2]);
 		exit(99);

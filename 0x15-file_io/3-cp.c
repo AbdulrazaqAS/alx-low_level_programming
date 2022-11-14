@@ -18,12 +18,12 @@ int main(int argc, char *argv[])
 	int fd, fd2, wr, rd;
 	char *buf;
 
-	if (argc != 2)
+	if (argc != 3)
 	{
 		write(STDERR_FILENO, "Usage: cp file_from file_to\n", 28);
 		exit(97);
 	}
-	
+
 	buf = malloc(sizeof(char) * 1024);
 
 	fd = open(argv[1], O_RDONLY);
@@ -48,7 +48,7 @@ int main(int argc, char *argv[])
 		fprintf(stderr, "Error: Can't close fd %d\n", fd);
 		exit(100);
 	}
-	
+
 	if (close(fd2) == -1)
 	{
 		fprintf(stderr, "Error: Can't close fd %d\n", fd2);

@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
 			exit(98);
 		}
 		if (rd < 1024)
-			buf[rd + 1] = '\0';
+			buf[rd] = '\0';
 		wr = dprintf(fd2, "%s", buf);
 		if (fd2 == -1 || wr == 0)
 		{

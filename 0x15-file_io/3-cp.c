@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
 
 	if (argc != 3)
 	{
-		write(STDERR_FILENO, "Usage: cp file_from file_to\n", 28);
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
 	buf = malloc(sizeof(char) * 1024);
@@ -31,16 +31,16 @@ int main(int argc, char *argv[])
 		rd = read(fd, buf, 1024);
 		if (fd == -1 || rd == -1)
 		{
-			fprintf(stderr, "Error: Can't read from file %s\n", argv[1]);
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 			exit(98);
 		}
 		if (rd < 1024)
 			buf[rd] = '\0';
-		wr = dprintf(fd2, "%s", buf);
-		if (fd2 == -1)
+		wr = write(fd2, buf, rd);
+		if (fd2 == -1 || wr == -1)
 		{
 			wr++;
-			fprintf(stderr, "Error: Can't write to %s\n", argv[2]);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 			exit(99);
 		}
 	} while (rd == 1024);
@@ -48,13 +48,13 @@ int main(int argc, char *argv[])
 	free(buf);
 	if (close(fd) == -1)
 	{
-		fprintf(stderr, "Error: Can't close fd %d\n", fd);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
 		exit(100);
 	}
 
 	if (close(fd2) == -1)
 	{
-		fprintf(stderr, "Error: Can't close fd %d\n", fd2);
+		fprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd2);
 		exit(100);
 	}
 

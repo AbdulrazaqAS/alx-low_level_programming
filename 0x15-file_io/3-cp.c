@@ -39,6 +39,7 @@ int main(int argc, char *argv[])
 		wr = dprintf(fd2, "%s", buf);
 		if (fd2 == -1)
 		{
+			wr++;
 			fprintf(stderr, "Error: Can't write to %s\n", argv[2]);
 			exit(99);
 		}

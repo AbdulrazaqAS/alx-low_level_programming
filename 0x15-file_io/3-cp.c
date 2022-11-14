@@ -44,7 +44,7 @@ int main(int argc, char *argv[])
 			exit(99);
 		}
 	}
-	while (rd < 1024);
+	while (rd == 1024);
 
 	free(buf);
 	if (close(fd) == -1)

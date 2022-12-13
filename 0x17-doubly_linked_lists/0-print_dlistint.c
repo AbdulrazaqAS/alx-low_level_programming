@@ -9,11 +9,11 @@
  */
 size_t print_dlistint(const dlistint_t *h)
 {
-	dlistint *tmp;
+	dlistint_t *tmp;
 	size_t i;
 
 	if (h == NULL)
-		return (NULL);
+		return (0);
 	tmp = h;
 	while (h)
 	{

@@ -8,6 +8,7 @@
  *
  * Return: num of nodes
  *
+ * Description: prints a d liked list
  */
 size_t print_dlistint(const dlistint_t *h)
 {

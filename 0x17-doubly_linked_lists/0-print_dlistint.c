@@ -2,10 +2,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/* print_list - prints the list
+/*
+ * print_dlistint - prints the list
  * @h: head
  *
  * Return: num of nodes
+ *
  */
 size_t print_dlistint(const dlistint_t *h)
 {

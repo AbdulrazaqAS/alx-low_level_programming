@@ -1,6 +1,0 @@
-Recursion()
-{
-	Base Case
-		...
-	Recursion();
-}

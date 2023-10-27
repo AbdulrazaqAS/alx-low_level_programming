@@ -1,3 +1,6 @@
+#ifndef V2
+#define V2
+
 #include <stdio.h>
 int _putchar(char c);
 void print_alphabet(void);
@@ -72,3 +75,5 @@ int _sqrt_recursion(int n);
 int is_prime_number(int n);
 int is_palindrome(char *s);
 int wildcmp(char *s1, char *s2);
+
+#endif

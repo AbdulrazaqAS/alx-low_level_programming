@@ -1,6 +1,9 @@
 #ifndef VARARG
 #define VARARG
 #include <stdarg.h>
+#include <stddef.h>
+#include <stdio.h>
+
 
 /**
  * struct printer - A new struct type defining a printer.

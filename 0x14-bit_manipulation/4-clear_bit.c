@@ -18,7 +18,8 @@ int clear_bit(unsigned long int *n, unsigned int index)
 	temp <<= (index + 1);
 	for (i = 0; i < index; i++)
 	{
-		/* Sets all trailing 0's not at index position
+		/*
+		 * Sets all trailing 0's not at index position
 		 * back to 1's
 		 */
 		temp |= (1 << i);
